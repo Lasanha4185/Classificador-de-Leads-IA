@@ -10,7 +10,7 @@ st.set_page_config(
 
 # Configuração da API do Google Gemini
 try:
-    genai.configure(api_key=st.secrets[""])
+    genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
     model = genai.GenerativeModel('gemini-1.5-flash-latest')
 except Exception as e:
     st.error(f"Erro ao configurar a API do Google. Verifique sua chave. Detalhes: {e}")
